@@ -1,0 +1,23 @@
+== Wallflower
+
+Generates a diagram of your Rails application's routes. 
+
+Requires dot, part of the Graphviz distribution.
+
+== Installation
+
+GraphViz is required to translate the DOT source code into images.
+
+  script/plugin install http://github.com/kuperov/wallflower/master
+
+Example
+=======
+
+To generate a diagram of the current rails project, run the following:
+
+  cd your/rails/app/dir
+  rake wallflower routes.dot
+  dot -Tpdf -o routes.pdf routes.dot 
+  open routes.pdf
+
+Copyright (c) 2010 Alex Cooper, released under the MIT license
